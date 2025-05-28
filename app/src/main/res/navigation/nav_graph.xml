@@ -1,0 +1,50 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/foodListFragment">
+
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.example.yemekuygulamasi.ui.foodlist.FoodListFragment"
+        android:label="Yemek Listesi">
+
+        <action
+            android:id="@+id/action_foodListFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.example.yemekuygulamasi.ui.fooddetail.FoodDetailFragment"
+        android:label="Yemek Detayları">
+
+        <argument
+            android:name="food"
+            app:argType="com.example.yemekuygulamasi.data.model.Food"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_foodDetailFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.yemekuygulamasi.ui.cart.CartFragment"
+        android:label="Sepet">
+
+        <action
+            android:id="@+id/action_cartFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+
+        <!-- Buraya eklenecek: -->
+        <action
+            android:id="@+id/action_cartFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.yemekuygulamasi.ui.cart.PaymentFragment"
+        android:label="Ödeme" />
+
+</navigation>
