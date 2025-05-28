@@ -1,0 +1,2 @@
+Kotlin, XML, MVVM ve Retrofit kullanılarak geliştirilen bir yemek sipariş uygulamasıdır. Kullanıcılar yemekleri listeleyebilir, detaylarını görüntüleyebilir, sepete ekleyebilir ve ödeme ekranı üzerinden sipariş verebilir. Modern Android mimarisi ve Navigation Component yapısıyla geliştirilmiştir.
+A food ordering app built with Kotlin, XML, MVVM, and Retrofit. Users can browse meals, view details, add items to the cart, and complete orders through a payment screen. Developed using modern Android architecture and Navigation Component.
